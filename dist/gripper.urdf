@@ -18,7 +18,7 @@
     <visual>
       <origin xyz="0.0231 2.4503e-17 -0.0330626" rpy="3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/sts3215_03a_v1__3.stl"/>
+        <mesh filename="assets/sts3215_03a_v1__3.stl"/>
       </geometry>
       <material name="sts3215_03a_v1_7_material">
         <color rgba="0.627451 0.627451 0.627451 1"/>
@@ -27,14 +27,14 @@
     <collision>
       <origin xyz="0.0231 2.4503e-17 -0.0330626" rpy="3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/sts3215_03a_v1__3.stl"/>
+        <mesh filename="assets/sts3215_03a_v1__3.stl"/>
       </geometry>
     </collision>
     <!-- Part bottom_plate -->
     <visual>
       <origin xyz="0 1.01915e-17 -0.063609" rpy="6.12323e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/bottom_plate.stl"/>
+        <mesh filename="assets/bottom_plate.stl"/>
       </geometry>
       <material name="bottom_plate_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -43,14 +43,14 @@
     <collision>
       <origin xyz="0 1.01915e-17 -0.063609" rpy="6.12323e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/bottom_plate.stl"/>
+        <mesh filename="assets/bottom_plate.stl"/>
       </geometry>
     </collision>
     <!-- Part top_plate -->
     <visual>
       <origin xyz="5.55112e-17 6.72205e-18 -0.063609" rpy="-8.26946e-16 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/top_plate.stl"/>
+        <mesh filename="assets/top_plate.stl"/>
       </geometry>
       <material name="top_plate_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -59,14 +59,14 @@
     <collision>
       <origin xyz="5.55112e-17 6.72205e-18 -0.063609" rpy="-8.26946e-16 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/top_plate.stl"/>
+        <mesh filename="assets/top_plate.stl"/>
       </geometry>
     </collision>
     <!-- Part camera_basement -->
     <visual>
       <origin xyz="2.77556e-17 6.72205e-18 -0.063609" rpy="-8.26946e-16 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/camera_basement.stl"/>
+        <mesh filename="assets/camera_basement.stl"/>
       </geometry>
       <material name="camera_basement_material">
         <color rgba="0.231373 0.380392 0.705882 1"/>
@@ -75,14 +75,14 @@
     <collision>
       <origin xyz="2.77556e-17 6.72205e-18 -0.063609" rpy="-8.26946e-16 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/camera_basement.stl"/>
+        <mesh filename="assets/camera_basement.stl"/>
       </geometry>
     </collision>
     <!-- Part camera_mobile_sup -->
     <visual>
       <origin xyz="0.060363 0.0002 0.0821203" rpy="-3.14159 -0.785398 -5.70839e-16"/>
       <geometry>
-        <mesh filename="package://assets/camera_mobile_sup.stl"/>
+        <mesh filename="assets/camera_mobile_sup.stl"/>
       </geometry>
       <material name="camera_mobile_sup_material">
         <color rgba="0.917647 0.917647 0.917647 1"/>
@@ -91,14 +91,14 @@
     <collision>
       <origin xyz="0.060363 0.0002 0.0821203" rpy="-3.14159 -0.785398 -5.70839e-16"/>
       <geometry>
-        <mesh filename="package://assets/camera_mobile_sup.stl"/>
+        <mesh filename="assets/camera_mobile_sup.stl"/>
       </geometry>
     </collision>
     <!-- Part interface_arm100 -->
     <visual>
       <origin xyz="2.77556e-17 -2.1684e-19 -0.063609" rpy="6.12323e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/interface_arm100.stl"/>
+        <mesh filename="assets/interface_arm100.stl"/>
       </geometry>
       <material name="interface_arm100_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -107,7 +107,7 @@
     <collision>
       <origin xyz="2.77556e-17 -2.1684e-19 -0.063609" rpy="6.12323e-17 1.5708 0"/>
       <geometry>
-        <mesh filename="package://assets/interface_arm100.stl"/>
+        <mesh filename="assets/interface_arm100.stl"/>
       </geometry>
     </collision>
   </link>
@@ -137,7 +137,7 @@
     <visual>
       <origin xyz="-5.55112e-17 0.0325 0.008" rpy="-3.87944e-26 1.48625e-24 2.68045e-17"/>
       <geometry>
-        <mesh filename="package://assets/internal_rod.stl"/>
+        <mesh filename="assets/internal_rod.stl"/>
       </geometry>
       <material name="internal_rod_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -146,7 +146,7 @@
     <collision>
       <origin xyz="-5.55112e-17 0.0325 0.008" rpy="-3.87944e-26 1.48625e-24 2.68045e-17"/>
       <geometry>
-        <mesh filename="package://assets/internal_rod.stl"/>
+        <mesh filename="assets/internal_rod.stl"/>
       </geometry>
     </collision>
   </link>
@@ -169,7 +169,7 @@
     <visual>
       <origin xyz="2.77556e-17 0.044 -0.004" rpy="-1.15988e-24 2.30841e-24 -2.90443e-17"/>
       <geometry>
-        <mesh filename="package://assets/external_rod.stl"/>
+        <mesh filename="assets/external_rod.stl"/>
       </geometry>
       <material name="external_rod_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -178,7 +178,7 @@
     <collision>
       <origin xyz="2.77556e-17 0.044 -0.004" rpy="-1.15988e-24 2.30841e-24 -2.90443e-17"/>
       <geometry>
-        <mesh filename="package://assets/external_rod.stl"/>
+        <mesh filename="assets/external_rod.stl"/>
       </geometry>
     </collision>
   </link>
@@ -193,7 +193,7 @@
     <visual>
       <origin xyz="-0.034641 0.024 -0.0049" rpy="2.22045e-16 -3.34777e-16 1.11936e-25"/>
       <geometry>
-        <mesh filename="package://assets/removable_tip.stl"/>
+        <mesh filename="assets/removable_tip.stl"/>
       </geometry>
       <material name="removable_tip_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -202,14 +202,14 @@
     <collision>
       <origin xyz="-0.034641 0.024 -0.0049" rpy="2.22045e-16 -3.34777e-16 1.11936e-25"/>
       <geometry>
-        <mesh filename="package://assets/removable_tip.stl"/>
+        <mesh filename="assets/removable_tip.stl"/>
       </geometry>
     </collision>
     <!-- Part distal_rod -->
     <visual>
       <origin xyz="-0.034641 0.024 -0.0048" rpy="5.40089e-25 7.43447e-25 -7.53612e-25"/>
       <geometry>
-        <mesh filename="package://assets/distal_rod.stl"/>
+        <mesh filename="assets/distal_rod.stl"/>
       </geometry>
       <material name="distal_rod_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -218,14 +218,14 @@
     <collision>
       <origin xyz="-0.034641 0.024 -0.0048" rpy="5.40089e-25 7.43447e-25 -7.53612e-25"/>
       <geometry>
-        <mesh filename="package://assets/distal_rod.stl"/>
+        <mesh filename="assets/distal_rod.stl"/>
       </geometry>
     </collision>
     <!-- Part pointy_tip_support -->
     <visual>
       <origin xyz="-0.0346303 0.02375 -0.0049" rpy="-4.44089e-16 -2.78697e-16 5.60793e-17"/>
       <geometry>
-        <mesh filename="package://assets/pointy_tip_support.stl"/>
+        <mesh filename="assets/pointy_tip_support.stl"/>
       </geometry>
       <material name="pointy_tip_support_material">
         <color rgba="0.647059 0.647059 0.647059 1"/>
@@ -234,14 +234,14 @@
     <collision>
       <origin xyz="-0.0346303 0.02375 -0.0049" rpy="-4.44089e-16 -2.78697e-16 5.60793e-17"/>
       <geometry>
-        <mesh filename="package://assets/pointy_tip_support.stl"/>
+        <mesh filename="assets/pointy_tip_support.stl"/>
       </geometry>
     </collision>
     <!-- Part distal_shell -->
     <visual>
       <origin xyz="-0.034641 0.024 -0.0051" rpy="2.22045e-16 -3.3475e-16 6.72905e-24"/>
       <geometry>
-        <mesh filename="package://assets/distal_shell.stl"/>
+        <mesh filename="assets/distal_shell.stl"/>
       </geometry>
       <material name="distal_shell_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -250,7 +250,7 @@
     <collision>
       <origin xyz="-0.034641 0.024 -0.0051" rpy="2.22045e-16 -3.3475e-16 6.72905e-24"/>
       <geometry>
-        <mesh filename="package://assets/distal_shell.stl"/>
+        <mesh filename="assets/distal_shell.stl"/>
       </geometry>
     </collision>
   </link>
@@ -281,7 +281,7 @@
     <visual>
       <origin xyz="0 0.0325 -0.008" rpy="1.83078e-24 -4.24704e-26 -6.94757e-18"/>
       <geometry>
-        <mesh filename="package://assets/internal_rod.stl"/>
+        <mesh filename="assets/internal_rod.stl"/>
       </geometry>
       <material name="internal_rod_2_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -290,7 +290,7 @@
     <collision>
       <origin xyz="0 0.0325 -0.008" rpy="1.83078e-24 -4.24704e-26 -6.94757e-18"/>
       <geometry>
-        <mesh filename="package://assets/internal_rod.stl"/>
+        <mesh filename="assets/internal_rod.stl"/>
       </geometry>
     </collision>
   </link>
@@ -313,7 +313,7 @@
     <visual>
       <origin xyz="0 0.044 -0.004" rpy="5.48982e-26 -2.12352e-25 -1.01668e-17"/>
       <geometry>
-        <mesh filename="package://assets/external_rod.stl"/>
+        <mesh filename="assets/external_rod.stl"/>
       </geometry>
       <material name="external_rod_2_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -322,7 +322,7 @@
     <collision>
       <origin xyz="0 0.044 -0.004" rpy="5.48982e-26 -2.12352e-25 -1.01668e-17"/>
       <geometry>
-        <mesh filename="package://assets/external_rod.stl"/>
+        <mesh filename="assets/external_rod.stl"/>
       </geometry>
     </collision>
   </link>
@@ -337,7 +337,7 @@
     <visual>
       <origin xyz="-0.0346303 0.02375 0.0049" rpy="-2.76863e-24 -1.66578e-16 1.04083e-17"/>
       <geometry>
-        <mesh filename="package://assets/pointy_tip_support.stl"/>
+        <mesh filename="assets/pointy_tip_support.stl"/>
       </geometry>
       <material name="pointy_tip_support_2_material">
         <color rgba="0.647059 0.647059 0.647059 1"/>
@@ -346,14 +346,14 @@
     <collision>
       <origin xyz="-0.0346303 0.02375 0.0049" rpy="-2.76863e-24 -1.66578e-16 1.04083e-17"/>
       <geometry>
-        <mesh filename="package://assets/pointy_tip_support.stl"/>
+        <mesh filename="assets/pointy_tip_support.stl"/>
       </geometry>
     </collision>
     <!-- Part distal_rod_2 -->
     <visual>
       <origin xyz="-0.034641 0.024 0.0048" rpy="5.40089e-25 -7.43447e-25 2.36377e-24"/>
       <geometry>
-        <mesh filename="package://assets/distal_rod.stl"/>
+        <mesh filename="assets/distal_rod.stl"/>
       </geometry>
       <material name="distal_rod_2_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -362,14 +362,14 @@
     <collision>
       <origin xyz="-0.034641 0.024 0.0048" rpy="5.40089e-25 -7.43447e-25 2.36377e-24"/>
       <geometry>
-        <mesh filename="package://assets/distal_rod.stl"/>
+        <mesh filename="assets/distal_rod.stl"/>
       </geometry>
     </collision>
     <!-- Part distal_shell_2 -->
     <visual>
       <origin xyz="-0.034641 0.024 0.0051" rpy="5.40089e-25 -1.89597e-20 3.46945e-18"/>
       <geometry>
-        <mesh filename="package://assets/distal_shell.stl"/>
+        <mesh filename="assets/distal_shell.stl"/>
       </geometry>
       <material name="distal_shell_2_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -378,14 +378,14 @@
     <collision>
       <origin xyz="-0.034641 0.024 0.0051" rpy="5.40089e-25 -1.89597e-20 3.46945e-18"/>
       <geometry>
-        <mesh filename="package://assets/distal_shell.stl"/>
+        <mesh filename="assets/distal_shell.stl"/>
       </geometry>
     </collision>
     <!-- Part removable_tip_2 -->
     <visual>
       <origin xyz="-0.034641 0.024 0.0049" rpy="1.54293e-23 -1.54999e-15 -6.60062e-16"/>
       <geometry>
-        <mesh filename="package://assets/removable_tip.stl"/>
+        <mesh filename="assets/removable_tip.stl"/>
       </geometry>
       <material name="removable_tip_2_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -394,7 +394,7 @@
     <collision>
       <origin xyz="-0.034641 0.024 0.0049" rpy="1.54293e-23 -1.54999e-15 -6.60062e-16"/>
       <geometry>
-        <mesh filename="package://assets/removable_tip.stl"/>
+        <mesh filename="assets/removable_tip.stl"/>
       </geometry>
     </collision>
   </link>
@@ -425,7 +425,7 @@
     <visual>
       <origin xyz="-0.0025159 -0.0178661 -0.00415" rpy="-3.33953e-25 -4.7303e-24 -1.7107"/>
       <geometry>
-        <mesh filename="package://assets/cam.stl"/>
+        <mesh filename="assets/cam.stl"/>
       </geometry>
       <material name="cam_material">
         <color rgba="0.901961 0.901961 0.901961 1"/>
@@ -434,7 +434,7 @@
     <collision>
       <origin xyz="-0.0025159 -0.0178661 -0.00415" rpy="-3.33953e-25 -4.7303e-24 -1.7107"/>
       <geometry>
-        <mesh filename="package://assets/cam.stl"/>
+        <mesh filename="assets/cam.stl"/>
       </geometry>
     </collision>
   </link>

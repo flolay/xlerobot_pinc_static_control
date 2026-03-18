@@ -20,7 +20,7 @@
     <visual>
       <origin xyz="0.101856 -0.00509356 -0.665853" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/035armbase_step.stl"/>
+        <mesh filename="assets/035armbase_step.stl"/>
       </geometry>
       <material name="035armbase_step_material">
         <color rgba="0.627451 0.627451 0.643137 1"/>
@@ -29,14 +29,14 @@
     <collision>
       <origin xyz="0.101856 -0.00509356 -0.665853" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/035armbase_step.stl"/>
+        <mesh filename="assets/035armbase_step.stl"/>
       </geometry>
     </collision>
     <!-- Part gimbal_base_step -->
     <visual>
       <origin xyz="0.103377 -0.00438476 -0.668057" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/gimbal_base_step.stl"/>
+        <mesh filename="assets/gimbal_base_step.stl"/>
       </geometry>
       <material name="gimbal_base_step_material">
         <color rgba="0.627451 0.627451 0.627451 1"/>
@@ -45,14 +45,14 @@
     <collision>
       <origin xyz="0.103377 -0.00438476 -0.668057" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/gimbal_base_step.stl"/>
+        <mesh filename="assets/gimbal_base_step.stl"/>
       </geometry>
     </collision>
     <!-- Part xlerobot_0_2_9_3d_step -->
     <visual>
       <origin xyz="0.103187 -0.00463072 -0.665881" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/xlerobot_0_2_9_3d_step.stl"/>
+        <mesh filename="assets/xlerobot_0_2_9_3d_step.stl"/>
       </geometry>
       <material name="xlerobot_0_2_9_3d_step_material">
         <color rgba="0.301961 0.301961 0.301961 1"/>
@@ -61,14 +61,14 @@
     <collision>
       <origin xyz="0.103187 -0.00463072 -0.665881" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/xlerobot_0_2_9_3d_step.stl"/>
+        <mesh filename="assets/xlerobot_0_2_9_3d_step.stl"/>
       </geometry>
     </collision>
     <!-- Part 035armbase_step_2 -->
     <visual>
       <origin xyz="0.101856 -0.00509356 -0.665853" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/035armbase_step__2.stl"/>
+        <mesh filename="assets/035armbase_step__2.stl"/>
       </geometry>
       <material name="035armbase_step_2_material">
         <color rgba="0.627451 0.627451 0.643137 1"/>
@@ -77,14 +77,14 @@
     <collision>
       <origin xyz="0.101856 -0.00509356 -0.665853" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/035armbase_step__2.stl"/>
+        <mesh filename="assets/035armbase_step__2.stl"/>
       </geometry>
     </collision>
     <!-- Part 035armbase_step_3 -->
     <visual>
       <origin xyz="0.101856 -0.00519356 -0.665853" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/035armbase_step__3.stl"/>
+        <mesh filename="assets/035armbase_step__3.stl"/>
       </geometry>
       <material name="035armbase_step_3_material">
         <color rgba="0.627451 0.627451 0.643137 1"/>
@@ -93,14 +93,14 @@
     <collision>
       <origin xyz="0.101856 -0.00519356 -0.665853" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/035armbase_step__3.stl"/>
+        <mesh filename="assets/035armbase_step__3.stl"/>
       </geometry>
     </collision>
     <!-- Part 035armbase_step_4 -->
     <visual>
       <origin xyz="0.101856 -0.00509356 -0.665853" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/035armbase_step__4.stl"/>
+        <mesh filename="assets/035armbase_step__4.stl"/>
       </geometry>
       <material name="035armbase_step_4_material">
         <color rgba="0.627451 0.627451 0.643137 1"/>
@@ -109,14 +109,14 @@
     <collision>
       <origin xyz="0.101856 -0.00509356 -0.665853" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/035armbase_step__4.stl"/>
+        <mesh filename="assets/035armbase_step__4.stl"/>
       </geometry>
     </collision>
     <!-- Part xlerobot_0_2_9bas_step -->
     <visual>
       <origin xyz="0.101856 -0.00509356 -0.665853" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/xlerobot_0_2_9bas_step.stl"/>
+        <mesh filename="assets/xlerobot_0_2_9bas_step.stl"/>
       </geometry>
       <material name="xlerobot_0_2_9bas_step_material">
         <color rgba="0.494118 0.494118 0.494118 1"/>
@@ -125,7 +125,7 @@
     <collision>
       <origin xyz="0.101856 -0.00509356 -0.665853" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://assets/xlerobot_0_2_9bas_step.stl"/>
+        <mesh filename="assets/xlerobot_0_2_9bas_step.stl"/>
       </geometry>
     </collision>
   </link>
