@@ -74,19 +74,22 @@ export class JointController {
     }
     const startTime = performance.now();
 
-    const step = (now) => {
-      const t = Math.min((now - startTime) / durationMs, 1);
-      const ease = t < 0.5
-        ? 4 * t * t * t
-        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    return new Promise((resolve) => {
+      const step = (now) => {
+        const t = Math.min((now - startTime) / durationMs, 1);
+        const ease = t < 0.5
+          ? 4 * t * t * t
+          : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
-      for (const [name, target] of Object.entries(targetValues)) {
-        const current = startValues[name] + (target - startValues[name]) * ease;
-        this.setJoint(name, current);
-      }
+        for (const [name, target] of Object.entries(targetValues)) {
+          const current = startValues[name] + (target - startValues[name]) * ease;
+          this.setJoint(name, current);
+        }
 
-      if (t < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
+        if (t < 1) requestAnimationFrame(step);
+        else resolve();
+      };
+      requestAnimationFrame(step);
+    });
   }
 }

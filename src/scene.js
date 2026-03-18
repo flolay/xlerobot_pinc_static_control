@@ -12,7 +12,7 @@ export function createScene(container) {
     20
   );
   // Further back to see the full dual-arm assembly
-  camera.position.set(0.5, 0.4, 0.5);
+  camera.position.set(0.81, 0.98, 1.16);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(container.clientWidth, container.clientHeight);
@@ -57,10 +57,15 @@ export function createScene(container) {
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
   controls.dampingFactor = 0.08;
-  controls.target.set(0, 0.15, 0);
+  controls.target.set(0.21, -0.08, 0.19);
   controls.minDistance = 0.15;
   controls.maxDistance = 3;
   controls.update();
+
+  // Camera debug overlay
+  const camInfo = document.createElement('div');
+  camInfo.className = 'fixed top-3 left-3 z-50 text-[11px] font-mono text-stone-500 bg-white/70 backdrop-blur-sm rounded-lg px-3 py-2 leading-relaxed';
+  document.body.appendChild(camInfo);
 
   function onResize() {
     camera.aspect = container.clientWidth / container.clientHeight;
@@ -72,6 +77,9 @@ export function createScene(container) {
   function animate() {
     requestAnimationFrame(animate);
     controls.update();
+    const p = camera.position;
+    const t = controls.target;
+    camInfo.textContent = `pos (${p.x.toFixed(2)}, ${p.y.toFixed(2)}, ${p.z.toFixed(2)})  target (${t.x.toFixed(2)}, ${t.y.toFixed(2)}, ${t.z.toFixed(2)})`;
     renderer.render(scene, camera);
   }
   animate();

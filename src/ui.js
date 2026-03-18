@@ -1,5 +1,5 @@
 import { ARM_JOINTS, GRIPPER_JOINT } from './joint-controller.js';
-import { PRESETS } from './presets.js';
+import { HOME_VALUES, ANIMATION_SEQUENCE } from './presets.js';
 
 const RAD_TO_DEG = 180 / Math.PI;
 
@@ -34,38 +34,80 @@ export function createUI(container, jointController) {
   header.innerHTML = `
     <div>
       <h2 class="text-xs font-semibold text-stone-800 tracking-widest uppercase">Joint Control</h2>
-      <p class="text-[10px] text-stone-400 mt-0.5">XLErobot PINC — Dual Arm</p>
+      <p class="text-[10px] text-stone-400 mt-0.5">XLerobot Pinc — Dual Arm</p>
     </div>
   `;
   panel.appendChild(header);
 
-  // Presets row
-  const presetsRow = document.createElement('div');
-  presetsRow.className = 'px-5 py-3 flex gap-2 overflow-x-auto border-b border-stone-100';
-  presetsRow.style.cssText = 'scrollbar-width:none;';
+  // Action buttons row
+  const actionsRow = document.createElement('div');
+  actionsRow.className = 'px-5 py-3 flex gap-2 border-b border-stone-100';
 
-  for (const preset of PRESETS) {
-    const btn = document.createElement('button');
-    btn.className = [
-      'flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-medium',
-      'bg-stone-100 text-stone-600',
-      'hover:bg-stone-800 hover:text-white',
-      'active:scale-95',
-      'transition-all duration-150',
-    ].join(' ');
-    btn.textContent = preset.name;
-    btn.addEventListener('click', () => {
-      jointController.animateTo(preset.values, 600);
-      presetsRow.querySelectorAll('button').forEach((b) => {
-        b.classList.remove('bg-stone-800', 'text-white');
-        b.classList.add('bg-stone-100', 'text-stone-600');
-      });
-      btn.classList.remove('bg-stone-100', 'text-stone-600');
-      btn.classList.add('bg-stone-800', 'text-white');
-    });
-    presetsRow.appendChild(btn);
+  const btnBase = [
+    'flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium',
+    'active:scale-95',
+    'transition-all duration-150',
+  ].join(' ');
+
+  // Home button
+  const homeBtn = document.createElement('button');
+  homeBtn.className = `${btnBase} bg-stone-100 text-stone-600 hover:bg-stone-800 hover:text-white`;
+  homeBtn.textContent = 'Home';
+
+  // Animate button
+  const animateBtn = document.createElement('button');
+  animateBtn.className = `${btnBase} bg-stone-100 text-stone-600 hover:bg-stone-800 hover:text-white`;
+  animateBtn.textContent = 'Animate';
+
+  let animating = false;
+  let stopAnimation = null;
+
+  function startAnimation() {
+    animating = true;
+    animateBtn.textContent = 'Stop';
+    animateBtn.classList.remove('bg-stone-100', 'text-stone-600');
+    animateBtn.classList.add('bg-stone-800', 'text-white');
+
+    let cancelled = false;
+    stopAnimation = () => { cancelled = true; };
+
+    (async () => {
+      while (!cancelled) {
+        for (const step of ANIMATION_SEQUENCE) {
+          if (cancelled) break;
+          await jointController.animateTo(step.values, step.duration);
+          if (cancelled) break;
+          await new Promise((r) => setTimeout(r, 200));
+        }
+      }
+      animating = false;
+      stopAnimation = null;
+      animateBtn.textContent = 'Animate';
+      animateBtn.classList.remove('bg-stone-800', 'text-white');
+      animateBtn.classList.add('bg-stone-100', 'text-stone-600');
+    })();
   }
-  panel.appendChild(presetsRow);
+
+  function stopAnim() {
+    if (stopAnimation) stopAnimation();
+  }
+
+  homeBtn.addEventListener('click', () => {
+    stopAnim();
+    jointController.animateTo(HOME_VALUES, 600);
+  });
+
+  animateBtn.addEventListener('click', () => {
+    if (animating) {
+      stopAnim();
+    } else {
+      startAnimation();
+    }
+  });
+
+  actionsRow.appendChild(homeBtn);
+  actionsRow.appendChild(animateBtn);
+  panel.appendChild(actionsRow);
 
   // Arm tabs
   const tabsRow = document.createElement('div');
@@ -75,7 +117,7 @@ export function createUI(container, jointController) {
 
   for (const side of SIDES) {
     const tabBtn = document.createElement('button');
-    tabBtn.className = 'flex-1 py-2.5 text-xs font-semibold tracking-wide uppercase transition-colors';
+    tabBtn.className = 'flex-1 py-3 text-sm font-semibold tracking-wide uppercase transition-colors';
     tabBtn.textContent = side.label;
     tabBtn.dataset.side = side.key;
     tabButtons.push(tabBtn);
@@ -91,7 +133,7 @@ export function createUI(container, jointController) {
 
   for (const side of SIDES) {
     const tabPanel = document.createElement('div');
-    tabPanel.className = 'px-5 py-4 space-y-4';
+    tabPanel.className = 'px-5 py-4 space-y-5';
     tabPanel.dataset.side = side.key;
 
     const joints = [...ARM_JOINTS, GRIPPER_JOINT];
@@ -105,7 +147,7 @@ export function createUI(container, jointController) {
       labelRow.className = 'flex justify-between items-center mb-1.5';
 
       const label = document.createElement('label');
-      label.className = 'text-xs font-medium text-stone-600';
+      label.className = 'text-sm font-medium text-stone-600';
       label.textContent = joint.label;
 
       const valueDisplay = document.createElement('span');
@@ -124,6 +166,7 @@ export function createUI(container, jointController) {
       slider.className = 'w-full h-1.5';
 
       slider.addEventListener('input', () => {
+        stopAnim();
         const val = parseFloat(slider.value);
         jointController.setJoint(prefixedName, val);
         valueDisplay.textContent = `${(val * RAD_TO_DEG).toFixed(1)}°`;
