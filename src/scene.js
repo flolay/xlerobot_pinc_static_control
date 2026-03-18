@@ -62,11 +62,6 @@ export function createScene(container) {
   controls.maxDistance = 3;
   controls.update();
 
-  // Camera debug overlay
-  const camInfo = document.createElement('div');
-  camInfo.className = 'fixed top-3 left-3 z-50 text-[11px] font-mono text-stone-500 bg-white/70 backdrop-blur-sm rounded-lg px-3 py-2 leading-relaxed';
-  document.body.appendChild(camInfo);
-
   function onResize() {
     camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
@@ -77,9 +72,6 @@ export function createScene(container) {
   function animate() {
     requestAnimationFrame(animate);
     controls.update();
-    const p = camera.position;
-    const t = controls.target;
-    camInfo.textContent = `pos (${p.x.toFixed(2)}, ${p.y.toFixed(2)}, ${p.z.toFixed(2)})  target (${t.x.toFixed(2)}, ${t.y.toFixed(2)}, ${t.z.toFixed(2)})`;
     renderer.render(scene, camera);
   }
   animate();
