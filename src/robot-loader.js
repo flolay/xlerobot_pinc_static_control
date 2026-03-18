@@ -75,10 +75,6 @@ export async function loadRobotAssembly(scene) {
     loadURDF('./gripper.urdf'),
   ]);
 
-  // Arms need 180° rotation to align correctly
-  leftArm.rotation.z = Math.PI;
-  rightArm.rotation.z = Math.PI;
-
   // Attach arms to base mount points
   const leftMount = base.links['so107_left_base'];
   const rightMount = base.links['so107_right_base'];
